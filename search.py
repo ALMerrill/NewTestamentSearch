@@ -26,7 +26,7 @@ selection = int(input("Make choice to view chapter: "))
 selVerse = results[selection - 1]
 chapter = []
 for entry in verses:
-    if selVerse.book is entry.book and selVerse.chapter is entry.chapter:
+    if selVerse.book == entry.book and selVerse.chapter == entry.chapter:
         chapter.append(entry)
 
 clear = lambda: os.system('cls')
