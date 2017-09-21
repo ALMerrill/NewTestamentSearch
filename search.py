@@ -26,8 +26,6 @@ with open('newTestament') as f:
         line = line.split("|")
         verses.append(Verse(line[0], line[1], line[2], line[3]))
 
-# for i in range(0,len(verses) - 1):
-#     print(verses[i].toString())
 loop = True
 while loop:
     search = input("Enter word or phrase to search: ").lower()
@@ -40,7 +38,7 @@ while loop:
 
     for i in range(len(results)):
         print("[" + str(i + 1) + "]", end= " ")
-        nprint(results[i].toString())
+        nprint(str(results[i]))
 
     selection = input("Make choice to view chapter('q' for quit, 'n' for new search): ")
     if selection == 'q':
@@ -57,7 +55,7 @@ while loop:
         clear()
 
         for entry in chapter:
-            nprint(entry.toString())
+            nprint(str(entry))
 
         valid = False
         while not valid:

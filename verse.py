@@ -5,5 +5,5 @@ class Verse(object):
         self.verse = verse
         self.text = text
 
-    def toString(self):
+    def __str__(self):
         return self.book + " " + self.chapter + ":" + self.verse + " " + self.text
